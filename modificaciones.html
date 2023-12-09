@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modificar Cotización</title>
+    <link rel="stylesheet" href="./estilos.css" />
+  </head>
+
+  <body>
+    <h1>Modificar Cotizaciones</h1>
+    <div id="app">
+      <form @submit.prevent="obtenerCotizacion">
+        <label for="idCotizacion">ID de Cotización:</label>
+        <input type="text" v-model="id" required /><br />
+        <button type="submit">Buscar Cotización</button>
+        <a href="index.html">Menú Principal</a>
+      </form>
+
+      <div v-if="mostrarDatosCotizacion">
+        <h2>Datos de la Cotización</h2>
+        <form @submit.prevent="guardarCambios">
+          <label for="nombreModificar">Nombre:</label>
+          <input
+            type="text"
+            id="nombreModificar"
+            v-model="nombre"
+            required
+          /><br />
+
+          <label for="empresaModificar">Empresa:</label>
+          <input
+            type="text"
+            id="empresaModificar"
+            v-model="empresa"
+            required
+          /><br />
+
+          <label for="correoModificar">Correo:</label>
+          <input
+            type="email"
+            id="correoModificar"
+            v-model="correo"
+            required
+          /><br />
+
+          <label for="cantidadEmpleadosModificar">Cantidad de Empleados:</label>
+          <input
+            type="number"
+            id="cantidadEmpleadosModificar"
+            v-model="cantidad_empleados"
+            required
+          /><br />
+
+          <label for="servicioModificar">Servicio:</label>
+          <select id="servicioModificar" v-model="servicio" required>
+            <option value="publico">Público</option>
+            <option value="coorporativo">Corporativo</option>
+            <option value="servicioComunitario">
+              Servicio Comunitario
+            </option></select
+          ><br />
+
+          <button type="submit">Guardar Cambios</button>
+          <a href="modificaciones.html">Cancelar</a>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="modificaciones.js"></script>
+  </body>
+</html>
