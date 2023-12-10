@@ -208,9 +208,7 @@ form {
 input[type="text"],
 input[type="number"],
 input[type="email"],
-/* Añadido para el tipo email */
 select,
-/* Añadido para los select */
 textarea {
   width: 100%;
   padding: 10px;
@@ -234,7 +232,6 @@ input[type="submit"] {
   display: block;
   width: 200px;
   margin: 20px auto;
-  /* Ajustado para centrar el botón */
 }
 
 input[type="submit"]:hover {
@@ -246,12 +243,10 @@ input[type="submit"]:hover {
   display: flex;
   text-align: center;
   font-size: 3rem;
-  /* Centrar los botones */
 }
 
 /* Estilo común para botones y enlaces que actúan como botones */
 .boton,
-/* Clase añadida para estilos comunes */
 input[type="submit"] {
   padding: 10px 15px;
   background-color: #4CAF50;
@@ -274,11 +269,8 @@ input[type="submit"]:hover {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* Dos columnas */
   grid-gap: 10px;
-  /* Espacio entre filas y columnas */
   margin-bottom: 20px;
-  /* Espacio antes de los botones */
 }
 
 /* Estilo para labels y elementos de formulario */
@@ -289,7 +281,6 @@ input[type="email"],
 select {
   width: 100%;
   margin-bottom: 10px;
-  /* Espacio debajo de cada elemento */
 }
 
 .form-buttons {
@@ -320,10 +311,6 @@ select {
 #tablaCotizaciones tbody tr {
   border-bottom: 1px solid #dddddd;
 }
-
-/* #tablaCotizaciones tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
-} */
 
 #tablaCotizaciones tbody tr:last-of-type {
   border-bottom: 2px solid #009879;

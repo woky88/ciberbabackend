@@ -15,6 +15,7 @@ fetch(URL + 'cotizaciones')
     for (let cotizacion of data) {
       let fila = document.createElement('tr');
       fila.innerHTML = `
+        <td>${cotizacion.id}</td>
         <td>${cotizacion.nombre}</td>
         <td>${cotizacion.empresa}</td>
         <td>${cotizacion.correo}</td>
